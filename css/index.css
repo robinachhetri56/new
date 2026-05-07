@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-
+:root{
+    --primary-color:#030712;
+    --color-white: rgb(219, 217, 217);
+    --secondary-color:#A87A2A;
+}
 *{
     font-family: "DM Sans", sans-serif;
 }
@@ -30,11 +34,14 @@ nav{
     gap: 30px;
 }
 .nav_items a{
-    color:rgb(224, 222, 222);
+    color:rgb(219, 217, 217);
     text-decoration: none;
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 500;
+}
+.consultant_button div svg{
+    color: rgb(219, 217, 217) !important;
 }
 
 .consultant_button{
@@ -42,132 +49,64 @@ nav{
     gap:20px;
     align-items: center;
 }
-.consultant_button button{
+.consultant_button .button{
     border: none;
     padding: 10px 30px;
     border-radius: 25px;
     font-size: 18px;
     font-weight: 600;
     background-color: #A87A2A;
-    border: 1px solid;
     color: white;
+    position:relative;
+    overflow:clip;
+    transition: all .3s ease-in-out;
 }
-
-/* THE BACKGROUND IMAGE SECTION */
-.hero{
-    height:90vh;
+.consultant_button .button .button_text {
+   position: relative;
+   top: 0px;
+   left: 0px;
+   z-index: 1;
+}
+.consultant_button .button .hov_button{
+    background-color: red;
+    height:100%;
+    width:0%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content:"";
+    contain:"";
+    transition: all .3s ease-in-out;
+}
+.consultant_button .button:hover{
+    color: #A87A2A;
+}
+.consultant_button .button:hover .hov_button{
     width:100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&h=1080&fit=crop&q=80");
-    background-size: cover;
-    background-position: center;
-    flex-direction: column;
 }
-
-/* HERO CONTENT */
-.hero_content {
-    margin-top: 80px;
-    padding-left: 80px;
-    max-width: 900px;
+.menu{
+    display: none;
 }
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 68px;
-    line-height: 1.1;
-    margin-bottom: 25px;
-    color: white;
-}
-p {
-    font-size: 20px;
-    line-height: 1.6;
-    opacity: 0.8;
-    max-width: 600px;
-    margin-bottom: 40px;
-    color:white;
-}
-
-/* CATEGORY TAGS (Glass Effect) */
-.category_tags {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 40px;
-    padding-left: 80px;
-}
-
-.tag {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 15px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size:18px;
-    font-weight: 600;
-}
-
-.tag.active {
-    background: white;
-    color: black;
-}
-
-/* BOTTOM BUTTONS */
-.cta_buttons {
-    display: flex;
-    gap: 20px;
-    padding-left: 80px;
-}
-
-.btn_portfolio {
-    background: #A87A2A;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 30px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.btn_glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 18px 35px;
-    border-radius: 30px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.stats-container {
-    background-color: #030712; 
-    color: white;
-    padding: 60px 20px;
-    display: flex;
-    justify-content: space-around; /* Distributes items evenly */
-    align-items: center;
-    text-align: center;
-}
-
-.stat-item h2 {
-    font-size: 5rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-family: "Playfair", serif; 
-}
-
-.stat-item p {
-    font-size: 1rem;
-    letter-spacing: 2px; /* Gives it that clean, modern look */
-    color: #a0a0a0; /* Slightly faded text for the sub-label */
-    text-transform: uppercase;
-}
-
-/* Mobile Responsive: */
-@media (max-width: 768px) {
-    .stats-container {
-        flex-direction: column;
-        gap: 40px;
+/*media query*/
+@media(max-width:480px){
+    navigation{
+    padding: 10px 0px;
     }
+    
+
+.logo img{
+    height: 30px;
+}
+.nav_items{
+    display: none;
+
+}
+.consultant_button{
+    display: none;
+}
+.menu{
+    display: block;
+    color: var(--color-white);
+    cursor: pointer;
+}
 }
