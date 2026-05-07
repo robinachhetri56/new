@@ -89,7 +89,7 @@ nav{
 }
 /*media query*/
 @media(max-width:480px){
-    navigation{
+    .navigation{
     padding: 10px 0px;
     }
     
