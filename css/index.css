@@ -171,35 +171,3 @@ p {
         gap: 40px;
     }
 }
-.page_header{
-    background-color: #1b1715;
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
-}
-
-.page_header h1{
-    font-family: Georgia, serif;
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.page_header p{
-    max-width: 700px;
-    margin: 0 auto 30px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.page_header div{
-    font-size: 16px;
-}
-
-.badge{
-    display: inline-block;
-    background-color: #4b4b4b;
-    color: white;
-    padding: 8px 18px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-}
