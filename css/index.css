@@ -21,6 +21,7 @@ nav{
     margin: 0px auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .logo img{
     height: 80px;
@@ -89,24 +90,31 @@ nav{
 }
 /*media query*/
 @media(max-width:480px){
+
     .navigation{
-    padding: 10px 0px;
+        width: 90%;
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    .logo img{
+        height: 45px;
+        width: auto;
+    }
+
+    .nav_items{
+       display: flex;
+    gap: 15px;
 }
     
 
-.logo img{
-    height: 30px;
-}
-.nav_items{
-    display: none;
+    .consultant_button{
+        display: none;
+    }
 
-}
-.consultant_button{
-    display: none;
-}
-.menu{
-    display: block;
-    color: var(--color-white);
-    cursor: pointer;
-}
+    .menu{
+        display: block;
+        color: var(--color-white);
+        cursor: pointer;
+    }
 }
