@@ -21,7 +21,6 @@ nav{
     margin: 0px auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 .logo img{
     height: 80px;
@@ -86,35 +85,190 @@ nav{
     width:100%;
 }
 .menu{
+    display:none;
+}
+
+
+/* HERO SECTION */
+.hero{
+    width:100%;
+    height:600px;
+    /* background-color: green; */
+    padding:10px 0px;
+    background-image: url("../resource/photo-1600210492486-724fe5c67fb0.jpg");
+    background-position: center center;
+    position: relative;
+
+}
+.hero::after{
+    height: 100%;
+    width:100%;
+    contain:"";
+    content:"";
+    position:absolute;
+    top:0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.434);
+
+
+}
+.hero_top{
+    display:flex;
+    gap:10px;
+    align-items: center;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.213);
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+.hero_top svg{
+    color:#A87A2A !important;
+}
+
+.hero_body{
+    width: 90%;
+    height:100%;
+    margin:0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:30px;
+    position:relative;
+    z-index: 1;
+    
+}
+.hero_title{
+    font-family: "Playfair", serif;
+    font-size:48px;
+    font-weight: 600;
+    width: 35%;
+    color: white;
+}
+.hero_description{
+    width:40%;
+    font-weight:600;
+    font-size: 20px;
+    color: var(--color-white);
+}
+
+
+.hero_button{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding:10px 30px;
+    border-radius:30px;
+}
+.hero_button .second{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color:  rgb(219, 217, 217);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-size: 16px;
+    font-weight: 700;
+}
+.hero_button .primary{
+    background-color: #A87A2A;
+    backdrop-filter: blur(0px) !important;
+    -webkit-backdrop-filter: blur(0px) !important;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(219, 217, 217);
+    text-transform: capitalize;
+    display:flex;
+    align-items: center;
+    gap:30px;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+.hero_cta{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    
+}
+.hero_cta div{
+    padding:15px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgb(219, 217, 217) ;
+    position: relative;
+    overflow: clip;
+}
+.hero_cta div p{
+    position: relative;
+    z-index: 1;
+    margin: 0px;
+    padding:0px;
+}
+.hero_cta div::after{
+    position: absolute;
+    height:100%;
+    background-color: white;
+    content:"";
+    top:0px;
+    left:0px;
+    contain:"";
+    /* z-index: -1; */
+    filter: blur(50px);
+}
+.hero_cta div:first-child{
+    background-color: #A87A2A;
+    color: rgb(219, 217, 217);
+}
+.primary svg{
+    height:20px !important;
+    width:20px !important;
+}
+
+.cta{
+    background-color: var(--primary-color);
+    padding:20px 0px;
+    color:var(--color-white);  
+    font-family: "Playfair Display", serif;
+}
+.cta_body{
+    width:90%;
+    margin:0px auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size:30px;
+    font-weight:600;
+}
+.cta_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+}
+
+
+/* MEDIA QUERY */
+@media(max-width:480px){
+    navigation{
+    padding: 12px 0px;
+}
+.logo img{
+    height: 30px;
+}
+.nav_items{
     display: none;
 }
-/*media query*/
-@media(max-width:480px){
-
-    .navigation{
-        width: 90%;
-        padding: 10px 0px;
-        align-items: center;
-    }
-
-    .logo img{
-        height: 45px;
-        width: auto;
-    }
-
-    .nav_items{
-       display: flex;
-    gap: 15px;
+.consultant_button{
+    display: none;
 }
-    
-
-    .consultant_button{
-        display: none;
-    }
-
-    .menu{
-        display: block;
-        color: var(--color-white);
-        cursor: pointer;
-    }
+.menu{
+    display:block;
+    color: rgb(219, 217, 217);
+    cursor:pointer;
+}
 }
